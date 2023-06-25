@@ -31,6 +31,7 @@ public class UtilityClassForCreateDriver {
                 String appUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
                         + File.separator + "resources" + File.separator + "ApiDemos-debug.apk";
                 //caps.setCapability(MobileCapabilityType.APP, appUrl);
+                //caps.setCapability("chromedriverExecutable", "/Users/ibrahimcelikel/Downloads/chromedriver_mac_arm64 (3)");
                 caps.setCapability("appPackage", "io.appium.android.apis");
                 caps.setCapability("appActivity", ".ApiDemos");
                 return new AndroidDriver(url,caps);
@@ -41,6 +42,7 @@ public class UtilityClassForCreateDriver {
                 String İOSAppurl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
                         + File.separator + "resources" + File.separator + "UIKitCatalog-iphonesimulator.app";
                 //caps.setCapability(MobileCapabilityType.APP, appUrl);
+                caps.setCapability("includeSafariInWebviews", true);
                 caps.setCapability("simulatorStartupTimeout", "180000");
                 caps.setCapability("bundleId", "com.example.apple-samplecode.UICatalog");
                 return new IOSDriver(url,caps);
